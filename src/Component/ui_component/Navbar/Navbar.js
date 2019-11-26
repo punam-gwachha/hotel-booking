@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import styled from 'styled-components';
 import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
-import Login from '../../../../src/image/login.jpg';
+import styled from 'styled-components';
+
+import Login from '../../../image/login.jpg';
 
 export default function Navbars() {
   const [isLoggedIn, setIslogged] = useState(true);
@@ -9,13 +10,13 @@ export default function Navbars() {
     <NavWrapper>
       <Container>
         <Navbar expand="lg">
-          <Navbar.Brand href="#home" className="logo">
+          <Navbar.Brand href="/" className="logo">
             <span className="logo_secondary">B</span>ook Hotels
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
+              <Nav.Link href="/">Home</Nav.Link>
               <Nav.Link href="#link">Popular Hotels</Nav.Link>
 
               {isLoggedIn ? (
@@ -23,7 +24,7 @@ export default function Navbars() {
                   title={<img src={Login} />}
                   id="collasible-nav-dropdown"
                 >
-                  <NavDropdown.Item href="#">Contact</NavDropdown.Item>
+                  <NavDropdown.Item href="/details">Contact</NavDropdown.Item>
                   <NavDropdown.Item href="#">setting</NavDropdown.Item>
                 </NavDropdown>
               ) : (
@@ -67,7 +68,7 @@ const NavWrapper = styled.section`
     content: none;
   }
   img {
-    width: 40px;
-    height: 40px;
+    width: 30px;
+    height: 30px;
   }
 `;
