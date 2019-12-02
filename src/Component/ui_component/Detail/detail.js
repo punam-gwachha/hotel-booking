@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import Login from '../../../../src/image/login.jpg';
+import User from '../../../../src/image/user.jpg';
 
 class Detail extends Component {
   render() {
@@ -34,12 +34,12 @@ class Detail extends Component {
               </div>
             </div>
             <div className="card-body">
-              <img src={Login} className="center image-class" />
+              <img src={User} className="center image-class" alt="" />
               <center>
                 <div className="col-md-6">
                   <input type="FirstName" placeholder="First Name" />
                 </div>
-                <br />​
+                <br />
                 <div className="col-md-6">
                   <input type="LastName" placeholder="Last Name" />
                 </div>
@@ -80,11 +80,16 @@ const DetailSection = styled.div`
     border: #ced4da solid 1px;
   }
   img {
-    height: 150px;
+    height: 100px;
     margin: auto;
     display: flex;
+    margin-bottom: 1.5rem;
   }
   button {
     margin: 25px;
+  }
+
+  .list-group-item {
+    color: black;
   }
 `;
